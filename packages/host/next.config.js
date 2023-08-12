@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const PRODUCTION = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,7 +12,7 @@ const nextConfig = {
           new webpack.container.ModuleFederationPlugin({
           name:'host',
           remotes:{
-              ui:'ui@http://localhost:8080/remoteEntry.js'
+              ui: PRODUCTION ? 'https://CDNURL.com/remoteEntry.js' :'ui@http://localhost:8080/remoteEntry.js'
           },
       }))
         return config
