@@ -22,9 +22,9 @@
       "@/*": [
         "./src/*"
       ],
-      "ui/NiceButton": [
-        "../ui/src/components/NiceButton"
-      ]
+      "ui/*": [
+        "../ui/src/components/*"
+      ],
     }
   },
   "include": [
