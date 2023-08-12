@@ -1,12 +1,11 @@
-import NiceButton from "ui/src/components/NiceButton";
-import HostButton from "@/components/HostButton";
+import dynamic from "next/dynamic";
 
+const NiceButton = dynamic(() => import("ui/NiceButton"),{ ssr: false });
 export default function Home() {
   return (
     <>
         <div>HI</div>
-        <NiceButton/>
-        <HostButton/>
+        <NiceButton text={'HI'} color={'red'}/>
     </>
   )
 }
