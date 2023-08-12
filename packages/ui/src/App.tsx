@@ -4,7 +4,7 @@ import HostButton from "host/src/components/HostButton";
 
 export default function App(){
     return <div>
-        <NiceButton/>
+        <NiceButton text={'HI'} color={'black'}/>
         <NiceInput/>
         <HostButton/>
     </div>
