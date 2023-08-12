@@ -33,7 +33,6 @@ module.exports = {
                 './NiceButton': './src/components/NiceButton',
                 './NiceInput': './src/components/NiceInput',
             },
-            shared:['react','react-dom']
         })
     ]
 }
